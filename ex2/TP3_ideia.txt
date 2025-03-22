@@ -1,0 +1,45 @@
+
+
+📊 Medições Passivas (Captura e Análise de Tráfego)
+
+✅ Captura de pacotes de streaming e videoconferência
+Usar Wireshark ou tcpdump para registrar pacotes de tráfego de Zoom, YouTube, Netflix, WebRTC, etc.
+Filtros para capturar apenas pacotes relevantes (ex: port 443 para HTTPS, port 3478 para STUN/TURN).
+
+✅ Análise de padrões de tráfego
+Identificar policing/shaping do ISP através da variação da largura de banda ao longo do tempo.
+Avaliar quantidade de retransmissões TCP (indicador de perda de pacotes).
+
+✅ Perda de pacotes e jitter
+Analisar o seqüenciamento de pacotes RTP (Real-time Transport Protocol).
+Medir variação no tempo de chegada dos pacotes (jitter).
+
+✅ Taxa de compressão de vídeo
+Verificar bitrate do stream (ex: Netflix adapta qualidade conforme a largura de banda disponível).
+
+✅ Análise de QoE (Quality of Experience)
+Comparar o desempenho da rede em diferentes momentos do dia.
+Medir tempo de carregamento e buffering em vídeos.
+
+🚀 Medições Ativas (Simulação e Testes)
+
+✅ Latência e Jitter fim-a-fim
+Usar ping ou hping3 para medir a latência de servidores de streaming.
+Usar iperf3 para enviar pacotes UDP simulando tráfego de vídeo e calcular jitter.
+
+✅ Teste de largura de banda disponível
+Usar iperf3 para medir largura de banda em TCP/UDP.
+Comparar a largura de banda real com o contratado pelo ISP.
+
+✅ Simulação de chamadas de vídeo
+Criar um servidor WebRTC e medir a variação de desempenho entre Wi-Fi, 4G, 5G e Ethernet.
+Usar Gstreamer para simular uma chamada de vídeo e analisar métricas de tráfego.
+
+✅ Comparação de ISPs
+Medir download/upload usando speedtest-cli.
+Comparar desempenho de diferentes provedores ao transmitir vídeo.
+
+✅ Detecção de QoS aplicada pelo ISP
+Testar se o ISP está a limitar tráfego de streaming (shaping) enviando pacotes com diferentes portas e protocolos.
+
+
